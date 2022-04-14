@@ -1,0 +1,23 @@
+.navigationItem {
+  text-decoration: none;
+  color: #111;
+  display: inline-block;
+  white-space: nowrap;
+  margin: 0 1vw;
+  transition: all 200ms ease-in;
+  position: relative;
+}
+
+.navigationItem:hover {
+  border-bottom-color: var(--primary);
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .navigationItem {
+    padding: 20px 0;
+    font-size: 1.5rem;
+    z-index: 6;
+  }
+}
+
