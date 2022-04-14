@@ -1,11 +1,12 @@
-require("dotenv").config({
+/* eslint-disable @typescript-eslint/no-var-requires */
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
 const contentfulConfig = {
   spaceId: process.env.CONTENTFUL_SPACE_ID,
   accessToken:
-  process.env.CONTENTFUL_ACCESS_TOKEN ||
+    process.env.CONTENTFUL_ACCESS_TOKEN ||
     process.env.CONTENTFUL_DELIVERY_TOKEN,
 };
 
@@ -30,42 +31,42 @@ const { spaceId, accessToken } = contentfulConfig;
 
 if (!spaceId || !accessToken) {
   throw new Error(
-    "Contentful spaceId and the access token need to be provided."
+    'Contentful spaceId and the access token need to be provided.'
   );
 }
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Contentful Starter",
-    description: "Official Contentful Gatsby Starter",
+    title: 'Gatsby Contentful Starter',
+    description: 'Official Contentful Gatsby Starter',
   },
-  pathPrefix: "/gatsby-contentful-starter",
+  pathPrefix: '/gatsby-contentful-starter',
   plugins: [
-    "gatsby-transformer-remark",
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-image",
+    'gatsby-transformer-remark',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-image',
     {
-      resolve: "gatsby-source-contentful",
+      resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
     },
     {
-      resolve: "gatsby-plugin-prettier-eslint",
+      resolve: 'gatsby-plugin-prettier-eslint',
       options: {
         prettier: {
           patterns: [
             // the pattern "**/*.{js,jsx,ts,tsx}" is not used because we will rely on `eslint --fix`
-            "**/*.{css,scss,less}",
-            "**/*.{json,json5}",
-            "**/*.{graphql}",
-            "**/*.{md,mdx}",
-            "**/*.{html}",
-            "**/*.{yaml,yml}",
+            '**/*.{css,scss,less}',
+            '**/*.{json,json5}',
+            '**/*.{graphql}',
+            '**/*.{md,mdx}',
+            '**/*.{html}',
+            '**/*.{yaml,yml}',
           ],
         },
         eslint: {
-          patterns: "**/*.{js,jsx,ts,tsx}",
+          patterns: '**/*.{js,jsx,ts,tsx}',
           customOptions: {
             fix: true,
             cache: true,

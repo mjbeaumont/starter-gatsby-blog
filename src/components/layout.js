@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-import './variables.css'
-import './global.css'
-import Seo from './seo'
-import Navigation from './navigation'
-import Footer from './footer'
+import './variables.css';
+import './global.css';
+import Seo from './seo';
+import Navigation from './navigation';
+import Footer from './footer';
 class Template extends React.Component {
   render() {
-    const { children } = this.props
+    const { children } = this.props;
 
     return (
       <>
@@ -16,8 +16,8 @@ class Template extends React.Component {
         <main>{children}</main>
         <Footer />
       </>
-    )
+    );
   }
 }
 
-export default Template
+export default Template;

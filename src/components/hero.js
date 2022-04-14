@@ -1,7 +1,7 @@
-import React from 'react'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import React from 'react';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
-import * as styles from './hero.module.css'
+import * as styles from './hero.module.css';
 
 const Hero = ({ image, title, content }) => (
   <div className={styles.hero}>
@@ -13,6 +13,6 @@ const Hero = ({ image, title, content }) => (
       {content && <p className={styles.content}>{content}</p>}
     </div>
   </div>
-)
+);
 
-export default Hero
+export default Hero;
