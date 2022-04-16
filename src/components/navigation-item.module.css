@@ -8,9 +8,26 @@
   position: relative;
 }
 
+.navigationItem:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0%;
+    content: ".";
+    color: transparent;
+    background: var(--primary);
+    height: 1px;
+    transition: all 0.4s ease-in;
+  }
+
 .navigationItem:hover {
   border-bottom-color: var(--primary);
   color: var(--primary);
+}
+
+.navigationItem:hover:after {
+  width: 100%;
 }
 
 @media (max-width: 768px) {
