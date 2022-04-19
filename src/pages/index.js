@@ -1,30 +1,31 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import get from 'lodash/get'
+import React from 'react';
+import { graphql } from 'gatsby';
+import get from 'lodash/get';
 
-import Layout from '../components/layout'
-import Hero from '../components/hero'
-import ArticlePreview from '../components/article-preview'
+import Layout from '../components/layout';
+import Hero from '../components/hero';
+import ArticlePreview from '../components/article-preview';
 
 class RootIndex extends React.Component {
   render() {
-    const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
-    const [author] = get(this, 'props.data.allContentfulPerson.nodes')
+    const posts = get(this, 'props.data.allContentfulBlogPost.nodes');
+    const page = get(this, 'props.data.contentfulHomePage');
 
     return (
       <Layout location={this.props.location}>
         <Hero
-          image={author.heroImage.gatsbyImageData}
-          title={author.name}
-          content={author.shortBio.shortBio}
+          image={page.heroImage.gatsbyImageData}
+          title={page.heroTitle}
+          subtitle={page.heroSubtitle}
+          ctaText={page.ctaText}
         />
         <ArticlePreview posts={posts} />
       </Layout>
-    )
+    );
   }
 }
 
-export default RootIndex
+export default RootIndex;
 
 export const pageQuery = graphql`
   query HomeQuery {
@@ -49,23 +50,13 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulPerson(
-      filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }
-    ) {
-      nodes {
-        name
-        shortBio {
-          shortBio
-        }
-        title
-        heroImage: image {
-          gatsbyImageData(
-            layout: CONSTRAINED
-            placeholder: BLURRED
-            width: 1180
-          )
-        }
+    contentfulHomePage {
+      heroTitle
+      heroSubtitle
+      heroImage {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
       }
+      ctaText
     }
   }
-`
+`;

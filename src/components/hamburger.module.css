@@ -1,0 +1,58 @@
+.hamburger {
+  background-color: #111;
+  width: 30px;
+  height: 3px;
+  align-self: center;
+  transition: all 0.3s linear;
+  position: relative;
+  transform: inherit;
+}
+
+.open.hamburger {
+  transform: rotate(-45deg);
+}
+
+.hamburger::before,
+.hamburger::after {
+  width: 30px;
+  height: 3px;
+  background-color: #111;
+  content: '';
+  position: absolute;
+  transition: all 0.3s linear;
+}
+
+.hamburger::before {
+  transform: rotate(0deg);
+  top: -10px;
+}
+
+.open.hamburger::before {
+  transform: rotate(-90deg) translate(-10px, 0px);
+}
+
+.hamburger::after {
+  opacity: 1;
+  transform: rotate(0deg);
+  top: 10px;
+}
+
+.open.hamburger::after {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+.button {
+  cursor: pointer;
+  display: none;
+  height: 100%;
+  padding: 0 10vw 0 0;
+  border: none;
+  background: none;
+}
+
+@media (max-width: 768px) {
+  .button {
+    display: flex;
+  }
+}

@@ -1,71 +1,76 @@
 .hero {
-  align-items: flex-end;
-  display: flex;
-  margin: 0 auto;
-  max-width: var(--size-max-width);
-  min-height: 200px;
-  padding: 0 0 var(--size-gutter);
+  margin: 0;
+  max-height: calc(100vh - 10vh);
+  width: 100vw;
   position: relative;
+  overflow: hidden;
 }
 
-.image {
-  /*
-    Ensure golden ratio for the hero size while limiting it to some extend to
-    the viewport width
-  */
-  height: 61.8vh;
-  max-height: 560px;
-  width: 100%;
-}
-
-.details {
-  background: var(--background);
-  left: 0;
-  max-width: 40rem;
-  width: 85%;
-  padding: var(--space-2xl) var(--size-gutter) 0;
+.imageOverlay {
   position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: black;
+  background: linear-gradient(
+    60deg,
+    rgba(0, 0, 0, 0.7777485994397759) 30%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.textOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  width: 100%;
 }
 
 .title {
   letter-spacing: -0.012em;
-  font-size: var(--text-title);
+  font-size: var(--text-2xl);
   font-weight: var(--extrabold);
   line-height: var(--solid);
   margin: 0 0 var(--space-xl);
 }
 
-.content {
-  font-size: var(--text-lead);
+.subtitle {
+  font-size: var(--text-md);
   font-weight: var(--semibold);
   margin: 0;
 }
 
-@media (min-width: 480px) {
-  .details {
-    padding-top: var(--space-3xl);
-  }
+.cta {
+  border: none;
+  background-color: var(--primary);
+  border-radius: 4px;
+  color: #fff;
+  font-size: var(--text-md);
+  font-weight: var(--bold);
+  margin-top: 1em;
+  padding: 1em 16px;
 }
 
 @media (min-width: 768px) {
-  .hero {
-    padding-top: var(--size-gutter);
+  .textOverlay {
+    padding: 2em;
   }
 
-  .details {
-    max-width: 44rem;
-    padding: var(--space-3xl) var(--size-gutter) 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  .image {
-    margin-left: auto;
-    width: 85%;
+  .title {
+    font-size: var(--text-4xl);
   }
 
-  .details {
-    left: var(--size-gutter);
-    padding: var(--space-3xl) var(--size-gutter) 0 0;
+  .subtitle {
+    font-size: var(--text-2xl);
+  }
+
+  .cta {
+    margin-top: 2em;
+    font-size: var(--text-xl);
   }
 }
