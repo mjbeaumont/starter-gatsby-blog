@@ -37,8 +37,9 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Contentful Starter',
-    description: 'Official Contentful Gatsby Starter',
+    title: 'The Musicians of the Hudson Valley Philharmonic',
+    description:
+      'A site to introduce the public to the members of the Hudson Valley Philharmonic',
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [

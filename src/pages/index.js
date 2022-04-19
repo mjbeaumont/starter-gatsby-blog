@@ -8,7 +8,6 @@ import ArticlePreview from '../components/article-preview';
 
 class RootIndex extends React.Component {
   render() {
-    console.log({ data: this.props.data });
     const posts = get(this, 'props.data.allContentfulBlogPost.nodes');
     const page = get(this, 'props.data.contentfulHomePage');
 
