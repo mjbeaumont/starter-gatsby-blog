@@ -7,7 +7,7 @@
   align-items: center;
   margin: 0 auto;
   padding: 0 5vw;
-  z-index: 2; 
+  z-index: 2;
 }
 
 @media (max-width: 768px) {
@@ -45,7 +45,6 @@
   }
 
   .open.navigation {
-     left: 0;
+    left: 0;
   }
 }
-

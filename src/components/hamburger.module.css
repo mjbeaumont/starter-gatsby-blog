@@ -28,7 +28,7 @@
 }
 
 .open.hamburger::before {
-  transform: rotate(-90deg) translate(-10px, 0px); 
+  transform: rotate(-90deg) translate(-10px, 0px);
 }
 
 .hamburger::after {
@@ -46,7 +46,7 @@
   cursor: pointer;
   display: none;
   height: 100%;
-  padding: 0 10vw;
+  padding: 0 10vw 0 0;
   border: none;
   background: none;
 }
