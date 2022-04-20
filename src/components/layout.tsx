@@ -5,7 +5,12 @@ import './global.css';
 import Seo from './seo';
 import Navigation from './navigation';
 import Footer from './footer';
-class Template extends React.Component {
+
+interface TemplateProps {
+  children: React.ReactNode;
+}
+
+class Template extends React.Component<TemplateProps> {
   render() {
     const { children } = this.props;
 

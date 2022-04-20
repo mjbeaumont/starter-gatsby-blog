@@ -2,7 +2,26 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const Seo = ({ description = '', lang = 'en', meta = [], title, image }) => {
+interface Meta {
+  name: string;
+  content: string;
+}
+
+interface SeoProps {
+  description?: string;
+  lang?: string;
+  meta: Meta[];
+  title: string;
+  image: string;
+}
+
+const Seo = ({
+  description = '',
+  lang = 'en',
+  meta = [],
+  title,
+  image,
+}: SeoProps) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -26,7 +45,7 @@ const Seo = ({ description = '', lang = 'en', meta = [], title, image }) => {
       }}
       title={title}
       defaultTitle={defaultTitle}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : undefined}
       meta={[
         {
           name: `description`,
