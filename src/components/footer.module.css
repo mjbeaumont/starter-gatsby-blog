@@ -1,9 +1,10 @@
 .container {
+  display: flex;
+  justify-content: space-between;
   border-top: 1px solid var(--border);
   font-size: var(--text-sm);
   margin-top: var(--space-2xl);
   padding: var(--space-2xl) 0;
-  text-align: right;
 }
 
 .container a {
@@ -14,4 +15,8 @@
 .container a:hover {
   border-bottom-color: var(--primary);
   color: var(--primary);
+}
+
+.icon {
+  margin-right: 10px;
 }
