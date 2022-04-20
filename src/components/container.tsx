@@ -1,6 +1,11 @@
 import React from 'react';
 
-const Container = ({ children, as = 'div' }) => {
+interface ContainerProps {
+  children: React.ReactNode;
+  as?: React.ElementType;
+}
+
+const Container = ({ children, as = 'div' }: ContainerProps) => {
   const Tag = as;
 
   return (
