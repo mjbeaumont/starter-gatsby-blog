@@ -10,9 +10,9 @@ interface Meta {
 interface SeoProps {
   description?: string;
   lang?: string;
-  meta: Meta[];
-  title: string;
-  image: string;
+  meta?: Meta[];
+  title?: string;
+  image?: string;
 }
 
 const Seo = ({
