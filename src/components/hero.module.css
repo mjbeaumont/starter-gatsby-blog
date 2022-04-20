@@ -46,7 +46,7 @@
 }
 
 .cta {
-  border: none;
+  border: 2px solid #fff;
   background-color: var(--secondary);
   border-radius: 4px;
   color: #fff;
@@ -54,6 +54,11 @@
   font-weight: var(--bold);
   margin-top: 1em;
   padding: 1em 16px;
+  cursor: pointer;
+}
+
+.cta:hover {
+  background-color: #ff7400;
 }
 
 @media (min-width: 768px) {
