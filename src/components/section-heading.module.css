@@ -1,0 +1,10 @@
+.heading {
+  font-weight: var(--bold);
+  font-size: var(--text-3xl);
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: var(--text-4xl);
+  }
+}
