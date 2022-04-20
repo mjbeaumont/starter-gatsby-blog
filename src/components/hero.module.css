@@ -1,6 +1,6 @@
 .hero {
   margin: 0;
-  max-height: calc(100vh - 10vh);
+  max-height: calc(100vh - 30vh);
   width: 100vw;
   position: relative;
   overflow: hidden;
