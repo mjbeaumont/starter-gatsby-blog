@@ -4,6 +4,7 @@ import get from 'lodash/get';
 
 import Layout from '../components/layout';
 import Hero from '../components/hero';
+import { ShortHistory } from '../components/short-history.tsx';
 import ArticlePreview from '../components/article-preview';
 
 class RootIndex extends React.Component {
@@ -19,6 +20,7 @@ class RootIndex extends React.Component {
           subtitle={page.heroSubtitle}
           ctaText={page.ctaText}
         />
+        <ShortHistory />
         <ArticlePreview posts={posts} />
       </Layout>
     );

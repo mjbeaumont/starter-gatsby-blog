@@ -47,7 +47,7 @@
 
 .cta {
   border: none;
-  background-color: var(--primary);
+  background-color: var(--secondary);
   border-radius: 4px;
   color: #fff;
   font-size: var(--text-md);
