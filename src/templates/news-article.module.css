@@ -2,10 +2,7 @@
   font-family: var(--font-serif);
   font-size: var(--text-lg);
   font-style: italic;
-  margin: 0 auto 1em;
   max-width: var(--size-max-width);
-  padding-bottom: var(--size-gutter);
-  padding-left: var(--size-gutter);
   position: relative;
   top: -1em;
 }
@@ -56,6 +53,12 @@
   font-weight: var(--semibold);
   margin-bottom: 0.5em;
   margin-top: 3em;
+}
+
+h1.pageHeading {
+  font-size: var(--text-4xl);
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .article li {

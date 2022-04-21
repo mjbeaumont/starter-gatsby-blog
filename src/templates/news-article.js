@@ -4,13 +4,13 @@ import get from 'lodash/get';
 
 import Seo from '../components/seo';
 import Layout from '../components/layout';
-import Hero from '../components/hero';
+import { ArticleImage } from '../components/article-image';
 import Tags from '../components/tags';
-import * as styles from './blog-post.module.css';
+import * as styles from './news-article.module.css';
 
-class BlogPostTemplate extends React.Component {
+class NewsArticleTemplate extends React.Component {
   render() {
-    const post = get(this.props, 'data.contentfulBlogPost');
+    const post = get(this.props, 'data.contentfulNewsArticle');
     const previous = get(this.props, 'data.previous');
     const next = get(this.props, 'data.next');
 
@@ -19,20 +19,22 @@ class BlogPostTemplate extends React.Component {
         <Seo
           title={post.title}
           description={post.description.childMarkdownRemark.excerpt}
-          image={`http:${post.heroImage.resize.src}`}
+          image={`http:${post.heroImage?.resize.src}`}
         />
-        <Hero
-          image={post.heroImage?.gatsbyImageData}
-          title={post.title}
-          content={post.description?.childMarkdownRemark?.excerpt}
-        />
+        {post.heroImage && (
+          <ArticleImage
+            image={post.heroImage?.gatsbyImageData}
+            alt={post.title}
+          />
+        )}
         <div className={styles.container}>
-          <span className={styles.meta}>
-            {post.author?.name} &middot;{' '}
-            <time dateTime={post.rawDate}>{post.publishDate}</time> –{' '}
-            {post.body?.childMarkdownRemark?.timeToRead} minute read
-          </span>
           <div className={styles.article}>
+            <h1 className={styles.pageHeading}>{post.title}</h1>
+            <span className={styles.meta}>
+              {post.author} &middot;{' '}
+              <time dateTime={post.rawDate}>{post.publishDate}</time> –{' '}
+              {post.body?.childMarkdownRemark?.timeToRead} minute read
+            </span>
             <div
               className={styles.body}
               dangerouslySetInnerHTML={{
@@ -45,14 +47,14 @@ class BlogPostTemplate extends React.Component {
                 <ul className={styles.articleNavigation}>
                   {previous && (
                     <li>
-                      <Link to={`/blog/${previous.slug}`} rel="prev">
+                      <Link to={`/news/${previous.slug}`} rel="prev">
                         ← {previous.title}
                       </Link>
                     </li>
                   )}
                   {next && (
                     <li>
-                      <Link to={`/blog/${next.slug}`} rel="next">
+                      <Link to={`/news/${next.slug}`} rel="next">
                         {next.title} →
                       </Link>
                     </li>
@@ -67,20 +69,18 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
-export default BlogPostTemplate;
+export default NewsArticleTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
+  query NewsArticleBySlug(
     $slug: String!
     $previousPostSlug: String
     $nextPostSlug: String
   ) {
-    contentfulBlogPost(slug: { eq: $slug }) {
+    contentfulNewsArticle(slug: { eq: $slug }) {
       slug
       title
-      author {
-        name
-      }
+      author
       publishDate(formatString: "MMMM Do, YYYY")
       rawDate: publishDate
       heroImage {
@@ -95,18 +95,17 @@ export const pageQuery = graphql`
           timeToRead
         }
       }
-      tags
       description {
         childMarkdownRemark {
           excerpt
         }
       }
     }
-    previous: contentfulBlogPost(slug: { eq: $previousPostSlug }) {
+    previous: contentfulNewsArticle(slug: { eq: $previousPostSlug }) {
       slug
       title
     }
-    next: contentfulBlogPost(slug: { eq: $nextPostSlug }) {
+    next: contentfulNewsArticle(slug: { eq: $nextPostSlug }) {
       slug
       title
     }

@@ -9,7 +9,7 @@ import ArticlePreview from '../components/article-preview';
 
 class RootIndex extends React.Component {
   render() {
-    const posts = get(this, 'props.data.allContentfulBlogPost.nodes');
+    const posts = get(this, 'props.data.allContentfulNewsArticle.nodes');
     const page = get(this, 'props.data.contentfulHomePage');
     const history = get(this, 'props.data.contentfulOurHistory');
 
@@ -32,12 +32,11 @@ export default RootIndex;
 
 export const pageQuery = graphql`
   query HomeQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulNewsArticle(sort: { fields: [publishDate], order: DESC }) {
       nodes {
         title
         slug
         publishDate(formatString: "MMMM Do, YYYY")
-        tags
         heroImage {
           gatsbyImageData(
             layout: FULL_WIDTH
@@ -62,6 +61,15 @@ export const pageQuery = graphql`
       ctaText
     }
     contentfulOurHistory {
+      heroCaption
+      heroImage {
+        gatsbyImageData(
+          layout: FULL_WIDTH
+          placeholder: BLURRED
+          width: 424
+          height: 212
+        )
+      }
       description {
         childMarkdownRemark {
           html

@@ -18,7 +18,7 @@ const Navigation = () => {
       <SocialIcons />
       <ul className={classNames(styles.navigation, { [styles.open]: isOpen })}>
         <NavigationItem to="/" label="Home" />
-        <NavigationItem to="/blog" label="Blog" />
+        <NavigationItem to="/news" label="News" />
         <NavigationItem to="/history" label="History" />
       </ul>
     </nav>

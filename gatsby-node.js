@@ -4,13 +4,13 @@ const path = require('path');
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
-  // Define a template for blog post
-  const blogPost = path.resolve('./src/templates/blog-post.js');
+  // Define a template for news article
+  const newsArticle = path.resolve('./src/templates/news-article.js');
 
   const result = await graphql(
     `
       {
-        allContentfulBlogPost {
+        allContentfulNewsArticle {
           nodes {
             title
             slug
@@ -28,7 +28,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return;
   }
 
-  const posts = result.data.allContentfulBlogPost.nodes;
+  const posts = result.data.allContentfulNewsArticle.nodes;
 
   // Create blog posts pages
   // But only if there's at least one blog post found in Contentful
@@ -41,8 +41,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         index === posts.length - 1 ? null : posts[index + 1].slug;
 
       createPage({
-        path: `/blog/${post.slug}/`,
-        component: blogPost,
+        path: `/news/${post.slug}/`,
+        component: newsArticle,
         context: {
           slug: post.slug,
           previousPostSlug,
