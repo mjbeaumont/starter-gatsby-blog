@@ -1,3 +1,8 @@
+.heroContainer {
+  margin: 0 auto;
+  max-width: var(--size-max-width);
+}
+
 .article {
   display: grid;
   font-size: var(--text-prose);

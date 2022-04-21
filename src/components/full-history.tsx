@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import * as styles from './full-history.module.css';
+import { IGatsbyImageData, GatsbyImage } from 'gatsby-plugin-image';
 
 interface FullHistoryProps {
   page: {
@@ -9,21 +10,32 @@ interface FullHistoryProps {
         html: string;
       };
     };
+    heroImage?: { gatsbyImageData: IGatsbyImageData };
   };
 }
 
 export const FullHistory = ({ page }: FullHistoryProps) => {
   return (
-    <div className={styles.container}>
-      <div className={styles.article}>
-        <h1 className={styles.pageHeading}>Our History</h1>
-        <div
-          className={styles.body}
-          dangerouslySetInnerHTML={{
-            __html: page.body?.childMarkdownRemark?.html,
-          }}
-        />
+    <>
+      {page.heroImage?.gatsbyImageData && (
+        <div className={styles.heroContainer}>
+          <GatsbyImage
+            image={page.heroImage?.gatsbyImageData}
+            alt="HVP Image"
+          />
+        </div>
+      )}
+      <div className={styles.container}>
+        <div className={styles.article}>
+          <h1 className={styles.pageHeading}>Our History</h1>
+          <div
+            className={styles.body}
+            dangerouslySetInnerHTML={{
+              __html: page.body?.childMarkdownRemark?.html,
+            }}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
