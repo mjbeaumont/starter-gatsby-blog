@@ -14,7 +14,7 @@ const ArticlePreview = ({ posts }) => {
 
   return (
     <Container>
-      <SectionHeading>HVP In The News</SectionHeading>
+      <SectionHeading>News Archives</SectionHeading>
       <ul className={styles.articleList}>
         {posts.map((post) => {
           return (
