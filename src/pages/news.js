@@ -30,14 +30,6 @@ export const pageQuery = graphql`
         title
         slug
         publishDate(formatString: "MMMM Do, YYYY")
-        heroImage {
-          gatsbyImageData(
-            layout: FULL_WIDTH
-            placeholder: BLURRED
-            width: 424
-            height: 212
-          )
-        }
         description {
           childMarkdownRemark {
             html

@@ -83,12 +83,6 @@ export const pageQuery = graphql`
       author
       publishDate(formatString: "MMMM Do, YYYY")
       rawDate: publishDate
-      heroImage {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 1280)
-        resize(height: 630, width: 1200) {
-          src
-        }
-      }
       body {
         childMarkdownRemark {
           html
