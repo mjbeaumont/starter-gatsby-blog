@@ -5,6 +5,7 @@ import * as styles from './short-history.module.css';
 import { Link } from 'gatsby';
 
 import { SectionHeading } from '../components/section-heading';
+import { HOME_MESSAGE_ID } from '../constants';
 
 interface ShortHistoryProps {
   history: {
@@ -18,7 +19,7 @@ interface ShortHistoryProps {
 
 export const ShortHistory = ({ history }: ShortHistoryProps) => {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id={HOME_MESSAGE_ID}>
       <Container>
         <SectionHeading>Our History</SectionHeading>
         <p
