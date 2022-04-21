@@ -46,6 +46,7 @@
 }
 
 .cta {
+  display: none;
   border: 2px solid #fff;
   background-color: var(--secondary);
   border-radius: 4px;
@@ -72,9 +73,5 @@
 
   .subtitle {
     font-size: var(--text-2xl);
-  }
-
-  .cta {
-    display: none;
   }
 }
