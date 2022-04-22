@@ -13,10 +13,13 @@ const Navigation = () => {
   const handleClick = () => setIsOpen((state) => !state);
 
   return (
-    <nav role="navigation" className={styles.container} aria-label="Main">
+    <nav role="navigation" className={styles.container} aria-label="Main Menu">
       <Hamburger open={isOpen} onClick={handleClick} />
       <SocialIcons />
-      <ul className={classNames(styles.navigation, { [styles.open]: isOpen })}>
+      <ul
+        className={classNames(styles.navigation, { [styles.open]: isOpen })}
+        id="main-menu"
+      >
         <NavigationItem to="/" label="Home" />
         <NavigationItem to="/news" label="News" />
         <NavigationItem to="/history" label="History" />

@@ -14,6 +14,7 @@ export const SocialIcons = () => {
         rel="noreferrer"
       >
         <FontAwesomeIcon icon={faFacebook} className={styles.icon} />
+        <span className="visible-hidden">Facebook</span>
       </a>
       <a
         href="https://www.instagram.com/musiciansofthehvp/"
@@ -21,6 +22,7 @@ export const SocialIcons = () => {
         rel="noreferrer"
       >
         <FontAwesomeIcon icon={faInstagram} className={styles.icon} />
+        <span className="visible-hidden">Instagram</span>
       </a>
     </div>
   );

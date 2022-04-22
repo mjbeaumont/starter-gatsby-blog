@@ -40,7 +40,7 @@
 }
 
 .subtitle {
-  font-size: var(--text-md);
+  font-size: var(--text-lg);
   font-weight: var(--semibold);
   margin: 0;
 }

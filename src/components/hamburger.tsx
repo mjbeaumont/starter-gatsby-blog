@@ -15,8 +15,11 @@ export const Hamburger = ({ open, onClick }: HamburgerProps) => {
       onClick={onClick}
       onKeyDown={onClick}
       role="button"
+      aria-controls="main-menu"
+      aria-expanded={open}
     >
       <div className={classNames(styles.hamburger, { [styles.open]: open })} />
+      <span className="visible-hidden">Menu</span>
     </div>
   );
 };
