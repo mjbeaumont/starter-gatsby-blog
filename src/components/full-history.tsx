@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import * as styles from './full-history.module.css';
 import { IGatsbyImageData, GatsbyImage } from 'gatsby-plugin-image';
+import { Link } from 'gatsby';
 
 interface FullHistoryProps {
   page: {
@@ -34,6 +35,9 @@ export const FullHistory = ({ page }: FullHistoryProps) => {
               __html: page.body?.childMarkdownRemark?.html,
             }}
           />
+          <div className={styles.readMore}>
+            <Link to="/">Read more &raquo;</Link>
+          </div>
         </div>
       </div>
     </>

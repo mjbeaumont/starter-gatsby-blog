@@ -68,6 +68,16 @@ h1.pageHeading {
   margin-bottom: 0;
 }
 
+.readMore a {
+  color: var(--primary);
+  border-bottom: none;
+  text-decoration: none;
+}
+
+.readMore a {
+  text-decoration: underline;
+}
+
 @media (min-width: 768px) {
   .container {
     max-width: var(--size-max-width);
