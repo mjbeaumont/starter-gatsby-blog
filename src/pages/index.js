@@ -13,7 +13,18 @@ class RootIndex extends React.Component {
     const page = get(this, 'props.data.contentfulHomePage');
     const history = get(this, 'props.data.contentfulOurHistory');
 
-    return <h1>Coming Soon</h1>;
+    return (
+      <Layout location={this.props.location}>
+        <Hero
+          image={page.heroImage.gatsbyImageData}
+          title={page.heroTitle}
+          subtitle={page.heroSubtitle}
+          ctaText={page.ctaText}
+        />
+        <ShortHistory history={history} />
+        <ArticlePreview posts={posts} />
+      </Layout>
+    );
   }
 }
 
