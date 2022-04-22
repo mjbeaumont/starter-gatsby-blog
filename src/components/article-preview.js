@@ -34,6 +34,9 @@ const ArticlePreview = ({ posts }) => {
                 <small className="meta">{post.publishDate}</small>
                 <Tags tags={post.tags} />
               </div>
+              <div className={styles.readMore}>
+                <Link to={`/news/${post.slug}`}>Read more &raquo;</Link>
+              </div>
             </li>
           );
         })}

@@ -27,3 +27,16 @@
   display: flex;
   justify-content: space-between;
 }
+
+.readMore {
+  margin-top: 1em;
+}
+
+.readMore a {
+  color: var(--primary);
+  font-weight: var(--semibold);
+}
+
+.readMore a:hover {
+  text-decoration: underline;
+}
