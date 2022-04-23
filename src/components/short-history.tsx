@@ -6,6 +6,8 @@ import * as styles from './short-history.module.css';
 import { SectionHeading } from '../components/section-heading';
 import { HOME_MESSAGE_ID } from '../constants';
 
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
+
 export const ShortHistory = () => {
   return (
     <section className={styles.container} id={HOME_MESSAGE_ID}>
@@ -58,21 +60,25 @@ export const ShortHistory = () => {
         <ul>
           <li>
             <strong>Bardavon Executive Director, Chris Silva:</strong>{' '}
-            <a href="mailto:csilva@bardavon.org">csilva@bardavon.org</a>
+            <OutboundLink href="mailto:csilva@bardavon.org">
+              csilva@bardavon.org
+            </OutboundLink>
           </li>
           <li>
             <strong>Bardavon Administrative Offices:</strong>{' '}
-            <span>(845) 473-5288</span>{' '}
+            <OutboundLink href="tel:1-845-473-5288">
+              (845) 473-5288
+            </OutboundLink>{' '}
           </li>
           <li>
             <strong>Bardavon Board of Directors:</strong>{' '}
-            <a
+            <OutboundLink
               href="https://www.bardavon.org/about-us/board-of-directors"
               target="_blank"
               rel="noreferrer"
             >
               www.bardavon.org/about-us/board-of-directors/
-            </a>
+            </OutboundLink>
           </li>
         </ul>
       </Container>
