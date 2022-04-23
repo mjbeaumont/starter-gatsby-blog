@@ -20,7 +20,7 @@ const handleClick = () => {
 
 const Hero = ({ image, title, subtitle, ctaText }: HeroProps) => (
   <div className={styles.hero}>
-    {image && <GatsbyImage alt={title} image={image} />}
+    {image && <GatsbyImage alt={title} image={image} loading="eager" />}
     <div className={styles.imageOverlay} />
     <div className={styles.textOverlay}>
       <h1 className={styles.title}>{title}</h1>
