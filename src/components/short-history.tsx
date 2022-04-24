@@ -27,7 +27,7 @@ export const ShortHistory = () => {
           season. Our management has indicated they do not wish to negotiate a
           new contract for our next season. We, the musicians, are members of
           the American Federation of Musicians, Local 238-291. We have made our
-          desire to negotiate a new contract know to the Bardavon management.
+          desire to negotiate a new contract known to the Bardavon management.
           While they claim the orchestra is a burden to the Bardavon, we
           disagree. The HVP should be seen as an asset. It is a jewel of the
           Hudson Valley!
