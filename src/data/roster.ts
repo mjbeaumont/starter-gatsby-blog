@@ -9,7 +9,6 @@ export enum MusicianPosition {
   Principal = 'Principal',
   AssistantPrincipal = 'Assistant Principal',
   Vacant = 'Position Vacant',
-  Leave = 'On Leave',
 }
 
 export const sections: Section[] = [
@@ -38,7 +37,7 @@ export const sections: Section[] = [
       'Rhonni Hallman',
       'Emily Kalish',
       'Francia Mann',
-      `Sarah Tusch (${MusicianPosition.Leave})`,
+      `Sarah Tusch`,
       `[${MusicianPosition.Vacant}]`,
     ],
   },
