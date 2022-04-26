@@ -23,6 +23,7 @@ const Navigation = () => {
         <NavigationItem to="/" label="Home" />
         <NavigationItem to="/news" label="News" />
         <NavigationItem to="/history" label="History" />
+        <NavigationItem to="/musicians" label="Musicians" />
       </ul>
     </nav>
   );

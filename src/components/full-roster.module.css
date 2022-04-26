@@ -1,0 +1,28 @@
+.sectionGrid {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 20px;
+}
+
+.container {
+  padding: 0 var(--size-gutter) calc(var(--size-gutter) * 2);
+}
+
+@media (min-width: 768px) {
+  .sectionGrid {
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  .container {
+    max-width: var(--size-max-width);
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+    width: calc(85% - var(--size-gutter));
+  }
+}
