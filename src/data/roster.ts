@@ -24,7 +24,7 @@ export const sections: Section[] = [
     musicians: [
       'Ji Min Lee (Principal)',
       'Uli Speth (Assistant Principal)',
-      'RachelCrozier',
+      'Rachel Crozier',
       'Emily Frederick',
       'Rhonni Hallman',
       'Emily Kalish',
