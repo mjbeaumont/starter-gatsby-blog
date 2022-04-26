@@ -125,7 +125,7 @@ export const sections: Section[] = [
     musicians: [
       `Terry Szor (${MusicianPosition.Principal})`,
       'Sam Singeltary',
-      '[position vacant]',
+      `[${MusicianPosition.Vacant}]`,
     ],
   },
   {
