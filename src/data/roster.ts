@@ -3,7 +3,7 @@ export interface Section {
   musicians: string[];
 }
 
-enum MusicianPosition {
+export enum MusicianPosition {
   Concertmaster = 'Concertmaster',
   AssistantConcertmaster = 'Assistant Concertmaster',
   Principal = 'Principal',
