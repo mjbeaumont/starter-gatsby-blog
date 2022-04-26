@@ -1,4 +1,9 @@
-export const sections = [
+export interface Section {
+  name: string;
+  musicians: string[];
+}
+
+export const sections: Section[] = [
   {
     name: 'First Violin',
     musicians: [
