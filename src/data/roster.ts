@@ -50,7 +50,7 @@ export const sections: Section[] = [
       'Aminda Asher',
       'Joanne Choi',
       'Madeline Fayette',
-      'Nanette Koc',
+      'Nanette Koch',
     ],
   },
   {
