@@ -3,12 +3,21 @@ export interface Section {
   musicians: string[];
 }
 
+enum MusicianPosition {
+  Concertmaster = 'Concertmaster',
+  AssistantConcertmaster = 'Assistant Concertmaster',
+  Principal = 'Principal',
+  AssistantPrincipal = 'Assistant Principal',
+  Vacant = 'Position Vacant',
+  Leave = 'On Leave',
+}
+
 export const sections: Section[] = [
   {
     name: 'First Violin',
     musicians: [
-      'Carole Cowan (Concertmaster)',
-      'Marka Young (Assistant Concertmaster)',
+      `Carole Cowan (${MusicianPosition.Concertmaster})`,
+      `Marka Young (${MusicianPosition.AssistantConcertmaster})`,
       'Olga Dusheina',
       'Irene Fitzgerald-Cherry',
       'Rachel Handman',
@@ -22,31 +31,33 @@ export const sections: Section[] = [
   {
     name: 'Second Violin',
     musicians: [
-      'Ji Min Lee (Principal)',
-      'Uli Speth (Assistant Principal)',
+      `Ji Min Lee (${MusicianPosition.Principal})`,
+      `Uli Speth (${MusicianPosition.AssistantPrincipal})`,
       'Rachel Crozier',
       'Emily Frederick',
       'Rhonni Hallman',
       'Emily Kalish',
       'Francia Mann',
-      'Sarah Tusch',
+      `Sarah Tusch (${MusicianPosition.Leave})`,
+      `[${MusicianPosition.Vacant}]`,
     ],
   },
   {
     name: 'Viola',
     musicians: [
-      'Charlotte Malin (Principal)',
-      'Gregory Williams (Assistant Principal)',
+      `Charlotte Malin (${MusicianPosition.Principal})`,
+      `Gregory Williams (${MusicianPosition.AssistantPrincipal})`,
       'Elizabeth Handman',
       'Isabella Mensz',
       'Yumi Oshima',
+      `[${MusicianPosition.Vacant}]`,
     ],
   },
   {
     name: 'Cello',
     musicians: [
-      'Susan Seligman (Principal)',
-      'Erica Pickhardt (Assistant Principal)',
+      `Susan Seligman (${MusicianPosition.Principal})`,
+      `Erica Pickhardt (${MusicianPosition.AssistantPrincipal})`,
       'Aminda Asher',
       'Joanne Choi',
       'Madeline Fayette',
@@ -56,15 +67,19 @@ export const sections: Section[] = [
   {
     name: 'Bass',
     musicians: [
-      'Phillip Helm (Principal)',
-      'Richard Sosinsky (Assistant Principal)',
+      `Phillip Helm (${MusicianPosition.Principal})`,
+      `Richard Sosinsky (${MusicianPosition.AssistantPrincipal})`,
       'Dan Merriman',
       'Edith Stratton',
     ],
   },
   {
     name: 'Flute',
-    musicians: ['Marcia Gates (Principal)', 'Jill Sokol', 'Amy Hersh'],
+    musicians: [
+      `Marcia Gates (${MusicianPosition.Principal})`,
+      'Jill Sokol',
+      'Amy Hersh',
+    ],
   },
   {
     name: 'Piccolo',
@@ -72,7 +87,7 @@ export const sections: Section[] = [
   },
   {
     name: 'Oboe',
-    musicians: ['Joel Evans'],
+    musicians: [`[${MusicianPosition.Vacant}]`, 'Joel Evans'],
   },
   {
     name: 'English Horn',
@@ -80,7 +95,11 @@ export const sections: Section[] = [
   },
   {
     name: 'Clarinet',
-    musicians: ['Daniel Spitzer (Principal)', 'Adam Gallob', 'Larry Tietze'],
+    musicians: [
+      `Daniel Spitzer (${MusicianPosition.Principal})`,
+      'Adam Gallob',
+      'Larry Tietze',
+    ],
   },
   {
     name: 'Bass Clarinet',
@@ -88,12 +107,15 @@ export const sections: Section[] = [
   },
   {
     name: 'Bassoon',
-    musicians: ['Jeffrey Marchand (Principal)', 'Harvey Feldman'],
+    musicians: [
+      `Jeffrey Marchand (${MusicianPosition.Principal})`,
+      'Harvey Feldman',
+    ],
   },
   {
     name: 'Horn',
     musicians: [
-      'Nick Caluori (Principal)',
+      `Nick Caluori (${MusicianPosition.Principal})`,
       'Matthew Smith',
       'Cody Halquist',
       'Daniel Salera',
@@ -101,11 +123,15 @@ export const sections: Section[] = [
   },
   {
     name: 'Trumpet',
-    musicians: ['Terry Szor (Principal)', 'Sam Singeltary'],
+    musicians: [
+      `Terry Szor (${MusicianPosition.Principal})`,
+      'Sam Singeltary',
+      '[position vacant]',
+    ],
   },
   {
     name: 'Trombone',
-    musicians: ['Bradley Ward (Principal)', 'Paul Bellino'],
+    musicians: [`Bradley Ward (${MusicianPosition.Principal})`, 'Paul Bellino'],
   },
   {
     name: 'Bass Trombone',
@@ -117,23 +143,23 @@ export const sections: Section[] = [
   },
   {
     name: 'Timpani',
-    musicians: ['Michael Singer (Principal)'],
+    musicians: [`Michael Singer (${MusicianPosition.Principal})`],
   },
   {
     name: 'Percussion',
     musicians: [
-      'Kyle Ritenauer (Principal)',
+      `Kyle Ritenauer (${MusicianPosition.Principal})`,
       'Matthew Beaumont',
       'Aya Kaminaguchi',
     ],
   },
   {
     name: 'Keyboard',
-    musicians: ['Yalin Chi (Principal)'],
+    musicians: [`Yalin Chi (${MusicianPosition.Principal})`],
   },
   {
     name: 'Harp',
-    musicians: ['Frances Duffy (Principal)'],
+    musicians: [`Frances Duffy (${MusicianPosition.Principal})`],
   },
   {
     name: 'Orchestra Librarian',
