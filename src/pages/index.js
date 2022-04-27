@@ -11,7 +11,6 @@ class RootIndex extends React.Component {
   render() {
     const posts = get(this, 'props.data.allContentfulNewsArticle.nodes');
     const page = get(this, 'props.data.contentfulHomePage');
-    const history = get(this, 'props.data.contentfulOurHistory');
 
     return (
       <Layout location={this.props.location}>
@@ -21,7 +20,7 @@ class RootIndex extends React.Component {
           subtitle={page.heroSubtitle}
           ctaText={page.ctaText}
         />
-        <ShortHistory history={history} />
+        <ShortHistory welcomeMessage={page.welcomeMessage} />
         <ArticlePreview posts={posts} />
       </Layout>
     );
@@ -50,23 +49,10 @@ export const pageQuery = graphql`
       heroImage {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
       }
+      welcomeMessage {
+        raw
+      }
       ctaText
-    }
-    contentfulOurHistory {
-      heroCaption
-      heroImage {
-        gatsbyImageData(
-          layout: FULL_WIDTH
-          placeholder: BLURRED
-          width: 424
-          height: 212
-        )
-      }
-      description {
-        childMarkdownRemark {
-          html
-        }
-      }
     }
   }
 `;
