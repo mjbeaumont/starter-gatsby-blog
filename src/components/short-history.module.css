@@ -34,6 +34,11 @@
   margin: 0.6em 0;
 }
 
+.container hr {
+  width: 50%;
+  margin: 3em auto;
+}
+
 .heading {
   margin-bottom: 0;
 }
