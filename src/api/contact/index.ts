@@ -21,7 +21,10 @@ export default async function handler(
   req: GatsbyFunctionRequest,
   res: GatsbyFunctionResponse
 ) {
-  console.log({ req });
+  if (req.method !== 'POST') {
+    throw new Error('Server error');
+  }
+
   const message = generateMessageBody(req.body as FormData);
   const { statusCode, body } = await sendMessage(message);
   res.status(statusCode).json({ body });
