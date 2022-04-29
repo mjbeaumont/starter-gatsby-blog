@@ -1,4 +1,4 @@
-import { FormData } from './';
+import { FormData } from '../../api/contact';
 
 export const generateMessageBody = ({
   name,

@@ -1,6 +1,6 @@
 import { GatsbyFunctionRequest, GatsbyFunctionResponse } from 'gatsby';
-import { generateMessageBody } from './generate-message-body';
-import { sendMessage } from './send-message';
+import { generateMessageBody } from '../../utils/contact-form/generate-message-body';
+import { sendMessage } from '../../utils/contact-form/send-message';
 
 enum FormRole {
   AudienceMember = 'Audience Member',
