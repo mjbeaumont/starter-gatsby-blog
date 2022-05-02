@@ -1,7 +1,7 @@
 .cta {
   border: 2px solid #fff;
-  background-color: var(--secondary);
   border-radius: 4px;
+  background-color: var(--secondary);
   color: #fff;
   font-size: var(--text-md);
   font-weight: var(--bold);
@@ -11,5 +11,5 @@
 }
 
 .cta:hover {
-  background-color: #ff7400;
+  background-color: var(--secondary);
 }
