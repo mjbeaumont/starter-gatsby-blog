@@ -1,0 +1,9 @@
+.container {
+  margin: 0 auto;
+  max-width: var(--size-max-width);
+  padding: var(--space-2xl) var(--size-gutter);
+}
+
+@media (min-width: 1024px) {
+  width: 80%;
+}
