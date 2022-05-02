@@ -1,0 +1,30 @@
+.form label {
+  font-weight: var(--bold);
+  display: block;
+  margin-top: 2em;
+}
+.form span {
+  color: red;
+}
+
+.form input,
+.form select {
+}
+
+.form input,
+.form select,
+.form textarea {
+  width: 100%;
+  padding: 12px;
+  display: block;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  resize: vertical;
+  border: 1px solid #ccc;
+}
+
+.form textarea {
+  height: 150px;
+}

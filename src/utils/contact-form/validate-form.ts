@@ -7,7 +7,7 @@ export enum FormRole {
   Other = 'Other',
 }
 
-const contactSchema = yup.object({
+export const contactSchema = yup.object({
   name: yup.string().required(),
   email: yup.string().required().email(),
   phone: yup.string().optional(),

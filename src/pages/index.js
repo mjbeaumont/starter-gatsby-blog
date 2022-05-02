@@ -6,6 +6,7 @@ import Layout from '../components/layout';
 import Hero from '../components/hero';
 import { ShortHistory } from '../components/short-history.tsx';
 import ArticlePreview from '../components/article-preview';
+import { ContactForm } from '../components/contact-form';
 
 class RootIndex extends React.Component {
   render() {
@@ -21,6 +22,7 @@ class RootIndex extends React.Component {
           ctaText={page.ctaText}
         />
         <ShortHistory welcomeMessage={page.welcomeMessage} />
+        <ContactForm />
         <ArticlePreview posts={posts} />
       </Layout>
     );
