@@ -7,6 +7,14 @@ export enum FormRole {
   Other = 'Other',
 }
 
+export interface FormData {
+  name: string;
+  email: string;
+  phone?: string;
+  role: FormRole;
+  message: string;
+}
+
 export const contactSchema = yup.object({
   name: yup.string().required('Name is required'),
   email: yup
@@ -19,7 +27,7 @@ export const contactSchema = yup.object({
 });
 
 export async function validateForm(input: unknown) {
-  return await contactSchema.validate(input, { abortEarly: false });
+  return (await contactSchema.validate(input, {
+    abortEarly: false,
+  })) as FormData;
 }
-
-export type FormData = yup.InferType<typeof contactSchema>;

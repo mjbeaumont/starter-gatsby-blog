@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form, Field, ErrorMessage, FormikHelpers } from 'formik';
 
 import {
   contactSchema,
@@ -29,7 +29,10 @@ const renderErrorMessage = ({ msg }: RenderErrorMessageProps) => (
 );
 
 export const ContactForm = () => {
-  const handleSubmit = async (values: FormData) => {
+  const handleSubmit = async (
+    values: FormData,
+    helpers: FormikHelpers<FormData>
+  ) => {
     const response = await fetch('/api/contact', {
       method: 'POST',
       headers: {
@@ -37,6 +40,7 @@ export const ContactForm = () => {
       },
       body: JSON.stringify(values),
     });
+    helpers.resetForm();
     console.log(await response.json());
   };
 
@@ -47,6 +51,7 @@ export const ContactForm = () => {
         <Formik
           validationSchema={contactSchema}
           onSubmit={handleSubmit}
+          // @ts-expect-error want role to start as empty
           initialValues={initialValues}
         >
           {({ isSubmitting }) => (
