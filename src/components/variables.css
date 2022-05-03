@@ -54,6 +54,7 @@
   /* colors */
   --primary: #2174d9;
   --secondary: #ff7400;
+  --high-contrast-link: #ffcb8b;
   --background: var(--white);
   --border: var(--black-fade-5);
 
