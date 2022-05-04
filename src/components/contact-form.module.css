@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-.form {
+.formInner {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -18,7 +18,7 @@
   margin-top: 2em;
 }
 .form span {
-  color: red;
+  color: var(--alert-primary);
 }
 
 .form input,
@@ -36,7 +36,7 @@
 }
 
 .form .error {
-  color: red;
+  color: var(--alert-primary);
   font-weight: var(--bold);
 }
 

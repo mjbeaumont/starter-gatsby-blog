@@ -58,6 +58,11 @@
   --background: var(--white);
   --border: var(--black-fade-5);
 
+  --alert-primary: #e74c3c;
+  --alert-secondary: #fce8e6;
+  --success-primary: #239860;
+  --success-secondary: #e1f8ed;
+
   /* text */
   /* color */
   --text-color: var(--black);

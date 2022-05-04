@@ -22,7 +22,10 @@ export const contactSchema = yup.object({
     .required('Email is required')
     .email(`That email address doesn't look quite right`),
   phone: yup.string().optional(),
-  role: yup.string().oneOf(Object.values(FormRole)).required(),
+  role: yup
+    .string()
+    .oneOf(Object.values(FormRole))
+    .required('Please tell us how you know about the HVP'),
   message: yup.string().required('Please include a message'),
 });
 
