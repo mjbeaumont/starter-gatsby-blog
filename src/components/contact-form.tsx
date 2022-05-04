@@ -12,6 +12,8 @@ import { SectionHeading } from '../components/section-heading';
 
 import { FormStatus, FormDialog } from '../components/form-dialog';
 
+import { HOME_CONTACT_ID } from '../constants';
+
 import * as styles from './contact-form.module.css';
 
 const initialValues = {
@@ -54,7 +56,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id={HOME_CONTACT_ID}>
       <ContentWidth>
         <SectionHeading>Contact Us</SectionHeading>
         {showSuccess && (
