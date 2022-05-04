@@ -3,6 +3,8 @@ import * as yup from 'yup';
 export enum FormRole {
   AudienceMember = 'Audience Member',
   BoardMember = 'Board Member',
+  BardavonSubscriber = 'Bardavon Subscriber',
+  HVPSubscriber = 'Hudson Valley Philharmonic Subscriber',
   Musician = 'Musician',
   Other = 'Other',
 }
