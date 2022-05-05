@@ -153,7 +153,9 @@ export const ContactForm = () => {
                   </label>
                 </div>
               </div>
-              <Cta disabled={isSubmitting}>Send Message</Cta>
+              <Cta disabled={isSubmitting} type="submit">
+                {isSubmitting ? 'Sending' : 'Send Message'}
+              </Cta>
             </Form>
           )}
         </Formik>

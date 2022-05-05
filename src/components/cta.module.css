@@ -11,5 +11,9 @@
 }
 
 .cta:hover {
-  background-color: var(--secondary);
+  background-color: #e66800;
+}
+
+.cta:disabled {
+  background-color: #ffd4b1;
 }
