@@ -6,6 +6,7 @@ export const generateMessageBody = ({
   phone,
   role,
   message,
+  emailConsent,
 }: FormData) => `
 <html> 
 <body>
@@ -16,5 +17,6 @@ export const generateMessageBody = ({
   Phone: ${phone ?? 'Not Provided'}<br />
   Role: ${role}<br />
   Message: ${message}<br />
+  Would like to receive email updates: ${emailConsent ? 'Yes' : 'No'}
 </p>
 `;

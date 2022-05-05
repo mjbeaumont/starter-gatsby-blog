@@ -15,6 +15,7 @@ export interface FormData {
   phone?: string;
   role: FormRole;
   message: string;
+  emailConsent: boolean;
 }
 
 export const contactSchema = yup.object({
@@ -29,6 +30,7 @@ export const contactSchema = yup.object({
     .oneOf(Object.values(FormRole))
     .required('Please tell us how you know about the HVP'),
   message: yup.string().required('Please include a message'),
+  emailConsent: yup.boolean().required(),
 });
 
 export async function validateForm(input: unknown) {
