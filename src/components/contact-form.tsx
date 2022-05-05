@@ -15,6 +15,7 @@ import { FormStatus, FormDialog } from '../components/form-dialog';
 import { HOME_CONTACT_ID } from '../constants';
 
 import * as styles from './contact-form.module.css';
+import classNames from 'classnames';
 
 const initialValues = {
   email: '',
@@ -22,6 +23,7 @@ const initialValues = {
   message: '',
   role: '',
   name: '',
+  emailConsent: false,
 };
 
 interface RenderErrorMessageProps {
@@ -119,14 +121,30 @@ export const ContactForm = () => {
                     render={(msg) => renderErrorMessage({ msg })}
                   />
                 </div>
-                <label htmlFor="name">
-                  What is your message? <span>*</span>
-                </label>
-                <Field as="textarea" name="message" id="message" />
-                <ErrorMessage
-                  name="message"
-                  render={(msg) => renderErrorMessage({ msg })}
-                />
+                <div className={classNames(styles.inputContainer, styles.full)}>
+                  <label htmlFor="name">
+                    What is your message? <span>*</span>
+                  </label>
+                  <Field as="textarea" name="message" id="message" />
+                  <ErrorMessage
+                    name="message"
+                    render={(msg) => renderErrorMessage({ msg })}
+                  />
+                </div>
+
+                <div
+                  className={classNames(
+                    styles.inputContainer,
+                    styles.full,
+                    styles.consent
+                  )}
+                >
+                  <label htmlFor="emailConsent">
+                    <Field type="checkbox" name="emailConsent" />
+                    Would you like to receive updates via email from the
+                    Musicians of the HVP?
+                  </label>
+                </div>
               </div>
               <Cta disabled={isSubmitting}>Send Message</Cta>
             </Form>

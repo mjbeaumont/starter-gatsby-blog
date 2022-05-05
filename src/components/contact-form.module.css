@@ -40,6 +40,15 @@
   font-weight: var(--bold);
 }
 
+.form input[type='checkbox'] {
+  width: 30px;
+  display: inline-block;
+}
+
+.form .consent {
+  margin-bottom: 1.2em;
+}
+
 .form textarea {
   height: 150px;
 }
@@ -47,5 +56,9 @@
 @media (min-width: 1024px) {
   .inputContainer {
     width: 48%;
+  }
+
+  .inputContainer.full {
+    width: 100%;
   }
 }
