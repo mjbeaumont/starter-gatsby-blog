@@ -17,6 +17,12 @@ import { HOME_CONTACT_ID } from '../constants';
 import * as styles from './contact-form.module.css';
 import classNames from 'classnames';
 
+declare global {
+  interface Window {
+    gtag: (event: 'event', name: string) => void;
+  }
+}
+
 const initialValues = {
   email: '',
   phone: '',
@@ -54,6 +60,7 @@ export const ContactForm = () => {
       body: JSON.stringify(values),
     });
     helpers.resetForm();
+    window?.gtag('event', 'contact_form_submission');
     revealSuccessMessage();
   };
 
