@@ -20,7 +20,7 @@
 }
 
 .container a {
-  color: var(--secondary);
+  color: var(--high-contrast-link);
   font-weight: var(--semibold);
 }
 

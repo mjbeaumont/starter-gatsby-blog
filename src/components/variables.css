@@ -53,9 +53,15 @@
   /* tokens */
   /* colors */
   --primary: #2174d9;
-  --secondary: #ffcb8b;
+  --secondary: #ff7400;
+  --high-contrast-link: #ffcb8b;
   --background: var(--white);
   --border: var(--black-fade-5);
+
+  --alert-primary: #e74c3c;
+  --alert-secondary: #fce8e6;
+  --success-primary: #239860;
+  --success-secondary: #e1f8ed;
 
   /* text */
   /* color */

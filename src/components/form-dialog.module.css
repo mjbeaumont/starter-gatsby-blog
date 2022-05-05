@@ -1,0 +1,12 @@
+.container {
+  padding: 20px;
+  margin: 1em auto;
+  border-radius: 5px;
+  font-weight: var(--semibold);
+}
+
+.container.success {
+  color: var(--success-primary);
+  background-color: var(--success-secondary);
+  border: 1px solid var(--success-primary);
+}

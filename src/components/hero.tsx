@@ -4,6 +4,8 @@ import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import * as styles from './hero.module.css';
 import { HOME_MESSAGE_ID } from '../constants';
 
+import { Cta } from './cta';
+
 import { getPreferredScrollBehavior } from '../utils';
 
 interface HeroProps {
@@ -25,11 +27,7 @@ const Hero = ({ image, title, subtitle, ctaText }: HeroProps) => (
     <div className={styles.textOverlay}>
       <h1 className={styles.title}>{title}</h1>
       {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
-      {ctaText && (
-        <button className={styles.cta} onClick={handleClick}>
-          {ctaText}
-        </button>
-      )}
+      {ctaText && <Cta onClick={handleClick}>{ctaText}</Cta>}
     </div>
   </div>
 );

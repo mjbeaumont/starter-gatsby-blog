@@ -4,6 +4,8 @@ import { Hamburger } from './hamburger';
 import { NavigationItem } from './navigation-item';
 import { SocialIcons } from './social-icons';
 
+import { HOME_CONTACT_ID } from '../constants';
+
 import * as styles from './navigation.module.css';
 import classNames from 'classnames';
 
@@ -23,6 +25,7 @@ const Navigation = () => {
         <NavigationItem to="/" label="Home" />
         <NavigationItem to="/news" label="News" />
         <NavigationItem to="/history" label="History" />
+        <NavigationItem to={`/#${HOME_CONTACT_ID}`} label="Contact" />
         <NavigationItem to="/musicians" label="Musicians" />
       </ul>
     </nav>
