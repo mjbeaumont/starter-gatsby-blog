@@ -50,7 +50,6 @@ export const ShortHistory = ({ welcomeMessage, assets }: ShortHistoryProps) => {
   const options: RenderNodeOptions = {
     renderNode: {
       [INLINES.ASSET_HYPERLINK]: (node, children) => {
-        console.log({ node, assets });
         const uri = getAssetUriById({ node, assets });
         return <a href={uri}>{children}</a>;
       },
