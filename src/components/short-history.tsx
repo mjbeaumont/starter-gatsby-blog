@@ -21,7 +21,7 @@ import type {
 import { OutboundLink } from 'gatsby-plugin-google-gtag';
 
 interface Asset {
-  id: string;
+  contentful_id: string;
   file: {
     url: string;
   };
@@ -42,7 +42,8 @@ interface GetAssetUriByIdArgs {
 }
 
 const getAssetUriById = ({ node, assets }: GetAssetUriByIdArgs) => {
-  return assets.find((asset) => asset.id === node.data.target.sys.id)?.file.url;
+  return assets.find((asset) => asset.contentful_id === node.data.target.sys.id)
+    ?.file.url;
 };
 
 export const ShortHistory = ({ welcomeMessage, assets }: ShortHistoryProps) => {
