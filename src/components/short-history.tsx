@@ -42,7 +42,7 @@ interface GetAssetUriByIdArgs {
 }
 
 const getAssetUriById = ({ node, assets }: GetAssetUriByIdArgs) => {
-  return assets.find((asset) => asset.id === node.data.target?.id)?.file.url;
+  return assets.find((asset) => asset.id === node.data.target.sys.id)?.file.url;
 };
 
 export const ShortHistory = ({ welcomeMessage, assets }: ShortHistoryProps) => {
