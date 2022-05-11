@@ -11,6 +11,7 @@ import { ContactForm } from '../components/contact-form';
 class RootIndex extends React.Component {
   render() {
     const posts = get(this, 'props.data.allContentfulNewsArticle.nodes');
+    const assets = get(this, 'props.data.allContentfulAsset.nodes');
     const page = get(this, 'props.data.contentfulHomePage');
 
     return (
@@ -42,6 +43,14 @@ export const pageQuery = graphql`
           childMarkdownRemark {
             html
           }
+        }
+      }
+    }
+    allContentfulAsset {
+      nodes {
+        id
+        file {
+          url
         }
       }
     }

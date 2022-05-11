@@ -13,29 +13,49 @@ import {
 } from 'gatsby-source-contentful/rich-text';
 
 import { INLINES } from '@contentful/rich-text-types';
-import type { RenderNode } from '@contentful/rich-text-react-renderer';
+import type {
+  RenderNode,
+  NodeRenderer,
+} from '@contentful/rich-text-react-renderer';
 
 import { OutboundLink } from 'gatsby-plugin-google-gtag';
 
+interface Asset {
+  id: string;
+  file: {
+    url: string;
+  };
+}
+
 interface ShortHistoryProps {
   welcomeMessage: RenderRichTextData<ContentfulRichTextGatsbyReference>;
+  assets: Asset[];
 }
 
 interface RenderNodeOptions {
   renderNode: RenderNode;
 }
 
-const options: RenderNodeOptions = {
-  renderNode: {
-    [INLINES.ASSET_HYPERLINK]: (node, children) => {
-      const { uri } = node.data;
-      console.log({ node, children });
-      return <a href={uri}>{children}</a>;
-    },
-  },
+interface GetAssetUriByIdArgs {
+  node: Parameters<NodeRenderer>[0];
+  assets: Asset[];
+}
+
+const getAssetUriById = ({ node, assets }: GetAssetUriByIdArgs) => {
+  return assets.find((asset) => asset.id === node.data.target?.id)?.file.url;
 };
 
-export const ShortHistory = ({ welcomeMessage }: ShortHistoryProps) => {
+export const ShortHistory = ({ welcomeMessage, assets }: ShortHistoryProps) => {
+  const options: RenderNodeOptions = {
+    renderNode: {
+      [INLINES.ASSET_HYPERLINK]: (node, children) => {
+        console.log({ node, assets });
+        const uri = getAssetUriById({ node, assets });
+        return <a href={uri}>{children}</a>;
+      },
+    },
+  };
+
   return (
     <section className={styles.container} id={HOME_MESSAGE_ID}>
       <Container>
