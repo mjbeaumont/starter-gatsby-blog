@@ -22,7 +22,7 @@ class RootIndex extends React.Component {
           subtitle={page.heroSubtitle}
           ctaText={page.ctaText}
         />
-        <ShortHistory welcomeMessage={page.welcomeMessage} />
+        <ShortHistory assets={assets} welcomeMessage={page.welcomeMessage} />
         <ContactForm />
         <ArticlePreview posts={posts} />
       </Layout>
