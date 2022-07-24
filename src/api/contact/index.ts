@@ -1,6 +1,7 @@
 import { GatsbyFunctionRequest, GatsbyFunctionResponse } from 'gatsby';
 import { generateMessageBody } from '../../utils/contact-form/generate-message-body';
 import { sendMessage } from '../../utils/contact-form/send-message';
+import { addNewSubscriber } from '../../utils/contact-form/add-new-subscriber';
 
 import { validateForm } from '../../utils/contact-form/validate-form';
 
@@ -14,6 +15,9 @@ export default async function handler(
 
   try {
     const validInput = await validateForm(req.body);
+    if (validInput.emailConsent) {
+      await addNewSubscriber(validInput);
+    }
     const message = generateMessageBody(validInput);
     const { statusCode, body } = await sendMessage(message);
     res.status(statusCode).json({ body });
