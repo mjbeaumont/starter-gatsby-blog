@@ -2,6 +2,9 @@ import mailchimp, { MemberErrorResponse } from '@mailchimp/mailchimp_marketing';
 import { FormData } from '../../utils/contact-form/validate-form';
 
 function initializeClient() {
+  if (!process.env.MAILCHIMP_API_KEY || !process.env.MAILCHIMP_SERVER_PREFIX) {
+    throw new Error('Must set mailchimp API key and server prefix');
+  }
   mailchimp.setConfig({
     apiKey: process.env.MAILCHIMP_API_KEY,
     server: process.env.MAILCHIMP_SERVER_PREFIX,
@@ -20,7 +23,7 @@ function splitName(name: FormData['name']) {
 export async function addNewSubscriber(formData: FormData) {
   initializeClient();
   if (!process.env.MAILCHIMP_LIST_ID) {
-    console.error('Must set Mailchimp list ID to add subscribers');
+    throw new Error('Must set Mailchimp list ID to add subscribers');
     return;
   }
 
@@ -42,6 +45,6 @@ export async function addNewSubscriber(formData: FormData) {
 
   if (Number.isFinite(response.status)) {
     const { title, detail } = response as MemberErrorResponse;
-    console.error(`${title}: ${detail}`);
+    throw new Error(`Error adding subscriber: ${title}: ${detail}`);
   }
 }
