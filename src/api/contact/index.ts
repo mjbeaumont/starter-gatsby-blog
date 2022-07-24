@@ -15,11 +15,11 @@ export default async function handler(
 
   try {
     const validInput = await validateForm(req.body);
+    const message = generateMessageBody(validInput);
+    const { statusCode, body } = await sendMessage(message);
     if (validInput.emailConsent) {
       await addNewSubscriber(validInput);
     }
-    const message = generateMessageBody(validInput);
-    const { statusCode, body } = await sendMessage(message);
     res.status(statusCode).json({ body });
   } catch (error) {
     res.status(400).json({ message: error.message });
