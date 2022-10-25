@@ -11,7 +11,7 @@ export const Events = () => {
     <section className={styles.container} id={HOME_EVENTS_ID}>
       <Container>
         <SectionHeading className={styles.heading}>Events</SectionHeading>
-        <h2>2022/2022 HVP Performances</h2>
+        <h2>2022/2023 HVP Performances</h2>
         <ul>
           <li>
             <strong>November 5th, 2022</strong>: Richard Einhorn’s “Voices of
@@ -53,7 +53,7 @@ export const Events = () => {
           <em>String Quartet in D Major, op;. 64, “Lark”</em> - J. Haydn
           <br />
           Hudson Valley String Quartet: Marka Young, violin David Fiedler,
-          violin Lauren Byrne, viola Jeanne Fox, cello{' '}
+          violin, Lauren Byrne, viola Jeanne Fox, cello{' '}
         </p>
         <p>
           <em>Cello Suite No. 2 in D Minor, BWV 1008</em> - JS Bach
@@ -81,7 +81,7 @@ export const Events = () => {
           Hudson Valley String Quartet
         </p>
         <p>
-          <strong>August 14, 2022 @ 5pm</strong> – Music by Jesse Montgomery,
+          <strong>January 14, 2022 @ 5pm</strong> – Music by Jesse Montgomery,
           Prokofiev, and more
           <br />
         </p>
