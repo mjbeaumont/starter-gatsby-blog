@@ -1,3 +1,13 @@
+h2.second-heading {
+  margin-top: 2em;
+}
+
+.movements {
+  margin: 12px 12px;
+  font-size: 94%;
+  font-style: italic;
+}
+
 .container {
   background: var(--white);
   color: var(--black);
