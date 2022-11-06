@@ -81,7 +81,7 @@ export const Events = () => {
           Hudson Valley String Quartet
         </p>
         <p>
-          <strong>January 14, 2023 @ 5pm</strong> – Music by Jesse Montgomery,
+          <strong>January 22, 2023 @ 5pm</strong> – Music by Jesse Montgomery,
           Prokofiev, and more
           <br />
         </p>
