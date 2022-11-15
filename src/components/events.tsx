@@ -91,10 +91,10 @@ export const Events = () => {
           Katherine Sinabaugh, viola, Jacqueline Stern, cello
         </p>
         <p>
-          <strong>Saturday, Feb. 26 @ 5:00pm</strong>
+          <strong>February 26, 2023 @ 5pm</strong>
         </p>{' '}
         <p>
-          <strong>Saturday, Mar. 19 @ 5:00pm</strong>
+          <strong>March 19, 2023 @ 5pm</strong>
         </p>{' '}
       </Container>
     </section>
