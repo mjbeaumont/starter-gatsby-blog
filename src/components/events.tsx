@@ -86,10 +86,16 @@ export const Events = () => {
           <br />
         </p>
         <p>
-          Performed by The Handman String Quartet; Christopher Santos, cello;
-          Amy Hersh, flute, Kathleen Thomson, violin, Katherine Sinabaugh,
-          viola, Jacqueline Stern, cello
+          Performed by The Handman String Quartet; Hudson Valley String Quartet;
+          Christopher Santos, cello; Amy Hersh, flute, Kathleen Thomson, violin,
+          Katherine Sinabaugh, viola, Jacqueline Stern, cello
         </p>
+        <p>
+          <strong>Saturday, Feb. 26 @ 5:00pm</strong>
+        </p>{' '}
+        <p>
+          <strong>Saturday, Mar. 19 @ 5:00pm</strong>
+        </p>{' '}
       </Container>
     </section>
   );
