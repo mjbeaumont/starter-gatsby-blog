@@ -22,7 +22,7 @@ export const Events = () => {
             the Poughkeepsie Civic Center
           </li>
           <li>
-            <strong>December 18th, 2022</strong>: Handel’s “Messiah”
+            <strong>December 17th, 2022</strong>: Handel’s “Messiah”
           </li>
           <li>
             <strong>May 20th, 2023</strong>: Holst’s “The Planets”
@@ -30,10 +30,11 @@ export const Events = () => {
         </ul>
         <h2 className={styles.secondHeading}>Philharmonic Chamber Series</h2>
         <p>
-          We are thrilled to announce 2 chamber music events featuring musicians
-          who play in the Hudson Valley Philharmonic. Admission is free, and
-          there will be opportunities to meet and chat with the musicians after
-          the concerts. Bring your friends and family for sublime music!
+          We are thrilled to announce 3 more chamber music events featuring
+          musicians who play in the Hudson Valley Philharmonic. Admission is
+          free, and there will be opportunities to meet and chat with the
+          musicians after the concerts. Bring your friends and family for
+          sublime music!
         </p>
         <p>
           All events are at{' '}
@@ -87,15 +88,17 @@ export const Events = () => {
         </p>
         <p>
           Performed by The Handman String Quartet; Hudson Valley String Quartet;
-          Christopher Santos, cello; Amy Hersh, flute, Kathleen Thomson, violin,
-          Katherine Sinabaugh, viola, Jacqueline Stern, cello
+          Cara Quartet (flute, violin, viola, cello), and cellist Christopher
+          Santos.
         </p>
         <p>
           <strong>February 26, 2023 @ 5pm</strong>
-        </p>{' '}
+        </p>
+        <p>Performed by violin duos, woodwind ensemble</p>
         <p>
           <strong>March 19, 2023 @ 5pm</strong>
-        </p>{' '}
+        </p>
+        <p>Brass Quintet with Paul Bellino</p>
       </Container>
     </section>
   );
