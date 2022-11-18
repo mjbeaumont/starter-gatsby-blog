@@ -48,40 +48,6 @@ export const Events = () => {
           20 Carroll St, Poughkeepsie
         </p>
         <p>
-          <strong>Saturday, Nov. 12 @ 7:30pm</strong>
-        </p>{' '}
-        <p>
-          <em>String Quartet in D Major, op;. 64, “Lark”</em> - J. Haydn
-          <br />
-          Hudson Valley String Quartet: Marka Young, violin David Fiedler,
-          violin, Lauren Byrne, viola Jeanne Fox, cello{' '}
-        </p>
-        <p>
-          <em>Cello Suite No. 2 in D Minor, BWV 1008</em> - JS Bach
-          <div className={styles.movements}>
-            Prelude
-            <br />
-            Allemande
-            <br />
-            Courante
-            <br /> Sarabande
-            <br /> Menuet I & II
-            <br /> Gigue
-            <br />
-          </div>{' '}
-          Christopher Santos, cello
-        </p>
-        <p>
-          <em>Five Duos for Two Cellos</em> - Halsey Stevens <br />
-          Nanette Koch, Susan Seligman, cello cello
-        </p>
-        <p>
-          <em>String Quartet in F Major, Op. 96 No. 12 (“American”)</em> -
-          Dvorak
-          <br />
-          Hudson Valley String Quartet
-        </p>
-        <p>
           <strong>January 22, 2023 @ 5pm</strong> – Music by Jesse Montgomery,
           Prokofiev, and more
           <br />
