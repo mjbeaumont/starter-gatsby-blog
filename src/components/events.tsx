@@ -65,6 +65,10 @@ export const Events = () => {
           <strong>March 18, 2023 @ 4pm</strong>
         </p>
         <p>Brass Quintet with Paul Bellino</p>
+        <p>
+          <strong>Sunday, April 30 @ 5pm</strong>
+        </p>
+        <p>Harp, strings, winds, piano</p>
       </Container>
     </section>
   );
