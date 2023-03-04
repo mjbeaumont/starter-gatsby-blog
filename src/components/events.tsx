@@ -25,6 +25,10 @@ export const Events = () => {
             <strong>December 17th, 2022</strong>: Handel’s “Messiah”
           </li>
           <li>
+            <strong>March 19th, 2023</strong>: “The Irish Tenors” at the Lycian
+            Center, Sugar Loaf
+          </li>
+          <li>
             <strong>May 20th, 2023</strong>: Holst’s “The Planets”
           </li>
         </ul>
@@ -69,6 +73,15 @@ export const Events = () => {
           <strong>Sunday, April 30 @ 5pm</strong>
         </p>
         <p>Harp, strings, winds, piano</p>
+        <p>
+          <strong>Sunday, May 21</strong>
+        </p>
+        <p>
+          3pm Silent Auction
+          <br />
+          4pm Concert
+        </p>
+        <p>Harp, Flute Quintet, Wind Octet</p>
       </Container>
     </section>
   );
