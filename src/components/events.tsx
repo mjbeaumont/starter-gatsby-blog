@@ -76,6 +76,7 @@ export const Events = () => {
         <p>
           <strong>Sunday, May 21</strong>
         </p>
+        <p>Concert and Fundraising Event</p>
         <p>
           3pm Silent Auction
           <br />
